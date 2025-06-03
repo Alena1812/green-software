@@ -58,7 +58,142 @@
       color: #1b5e20;
       border-bottom: 2px solid #66bb6a;
     }
-    /* ... (todo el CSS original que sigue) ... */
+    main {
+      max-width: 950px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: rgba(255,255,255,0.97);
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(46,125,50,0.08);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 1s;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .img-text-row {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .img-left {
+      order: 0;
+    }
+    .img-right {
+      order: 1;
+    }
+    .img-text-row img {
+      max-width: 320px;
+      min-width: 180px;
+      width: 35vw;
+      border-radius: 10px;
+      margin: 0;
+      box-shadow: 0 2px 8px rgba(56,142,60,0.13);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .img-text-row img:hover {
+      transform: scale(1.05) rotate(-2deg);
+      box-shadow: 0 8px 24px rgba(56,142,60,0.18);
+    }
+    .img-text-row p {
+      flex: 1 1 250px;
+      margin: 0;
+    }
+    @media (max-width: 900px) {
+      .img-text-row { flex-direction: column; gap: 1rem;}
+      .img-text-row img { width: 100%; max-width: 100%;}
+    }
+    h2 {
+      color: #1b5e20;
+      border-left: 6px solid #66bb6a;
+      padding-left: 0.7rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+    }
+    .conclusion {
+      background: linear-gradient(90deg, #a5d6a7 0%, #e8f5e9 100%);
+      color: #1b5e20;
+      font-weight: bold;
+      font-size: 1.2rem;
+      /* Quitar el borde izquierdo */
+      border-left: none;
+      padding: 2.2rem 2.5rem 2.2rem 3.8rem; /* Más espacio a la izquierda para la hoja */
+      border-radius: 18px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 18px rgba(56,142,60,0.13);
+      position: relative;
+      overflow: hidden;
+      animation: pulse 2s infinite alternate;
+    }
+    .conclusion .leaf-icon {
+      position: absolute;
+      left: 1.2rem;
+      top: 1.5rem;
+      font-size: 2.2rem;
+      opacity: 0.8;
+      animation: floatLeaf 3s infinite alternate;
+      pointer-events: none;
+      filter: drop-shadow(0 2px 8px #b9f6ca44);
+    }
+    @keyframes pulse {
+      from { box-shadow: 0 4px 18px rgba(56,142,60,0.13);}
+      to { box-shadow: 0 8px 32px rgba(56,142,60,0.22);}
+    }
+    @keyframes floatLeaf {
+      from { transform: translateY(0);}
+      to { transform: translateY(12px);}
+    }
+    .conclusion h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.7rem;
+      color: #256029;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #b9f6ca44;
+    }
+    .conclusion p {
+      font-weight: 500;
+      font-size: 1.18rem;
+      color: #256029;
+      margin-bottom: 0;
+      text-shadow: 0 1px 6px #b9f6ca22;
+    }
+    footer {
+      background: #2e7d32;
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem 0 2.2rem 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      margin-top: 2rem;
+      position: relative;
+    }
+    .footer-group {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+      color: #c8e6c9;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @media (max-width: 700px) {
+      header { padding: 2.5rem 1rem 1.5rem 1rem; }
+      main { padding: 0 0.3rem; }
+      section { padding: 1.2rem 0.7rem; }
+    }
     #btn-top {
       position: fixed;
       bottom: 20px;
@@ -97,9 +232,96 @@
     <a href="#conclusion">Conclusión</a>
     <a href="#bibliografia">Bibliografía</a>
   </nav>
-  <!-- Tu contenido original acá -->
-
-  <section id="bibliografia">
+<main>
+<section id="que">
+<h2>¿Qué es el Green Software?</h2>
+<div class="img-text-row">
+<img alt="Naturaleza y tecnología" class="img-left" src="imagenes/2.jpeg"/>
+<p>
+          El Green Software, también conocido como software sostenible, es una práctica tecnológica orientada a desarrollar, gestionar y utilizar software con un impacto ambiental mínimo. Promueve la eficiencia energética y la optimización de recursos informáticos, comprometiéndose con la sostenibilidad a través de un diseño eficiente de código, elección de infraestructuras ecológicas y prácticas responsables.<br/>
+          Implica reducir el consumo energético, seleccionar tecnologías sostenibles y minimizar la huella de carbono digital. En resumen, el Green Software es una estrategia vital para reducir el impacto ambiental del uso intensivo de tecnologías digitales y enfrentar los desafíos ecológicos actuales.
+        </p>
+</div>
+</section>
+<section id="por-que">
+<h2>¿Por qué es importante el Green Software?</h2>
+<p>
+        La importancia del Green Software surge del incremento exponencial del consumo energético global debido a la digitalización acelerada. La creciente demanda de servicios digitales impulsa el funcionamiento constante de centros de datos, que consumen aproximadamente el 3% de la energía mundial.<br/>
+        Implementar software sostenible es indispensable para mitigar el impacto ambiental del sector tecnológico, reducir emisiones contaminantes y fomentar un desarrollo responsable. Adoptar estrategias sostenibles es clave para gestionar el crecimiento tecnológico y garantizar la sostenibilidad ambiental.
+      </p>
+</section>
+<section id="para-que">
+<h2>¿Para qué implementar el Green Software?</h2>
+<div class="img-text-row">
+<p>
+          El propósito del Green Software es reducir las emisiones de carbono mediante el uso eficiente de la energía y disminuir costos operativos gestionando racionalmente los recursos tecnológicos.<br/>
+          Además, permite cumplir normativas ambientales internacionales, mejorar la reputación corporativa y fomentar la innovación tecnológica con criterios ecológicos. Implementar Green Software genera beneficios ambientales, económicos y reputacionales, siendo una herramienta estratégica en la gestión tecnológica sostenible.
+        </p>
+<img alt="Objetivo ecológico" class="img-right" src="imagenes/3.jpeg"/>
+</div>
+</section>
+<section id="quienes">
+<h2>¿Quiénes están involucrados?</h2>
+<div class="img-text-row">
+<img alt="Equipo colaborando en tecnología sostenible" class="img-left" src="imagenes/4.jpg"/>
+<p>
+          Los principales responsables del Green Software son los desarrolladores, quienes influyen en la eficiencia del código. Las empresas tecnológicas deben adoptar políticas sostenibles, mientras que los usuarios finales impulsan la demanda de soluciones ecológicas.<br/>
+          También participan gobiernos y organismos reguladores, así como organizaciones educativas y ambientales. La implementación eficaz del Green Software requiere la participación coordinada de múltiples actores, asegurando el éxito del enfoque sostenible.
+        </p>
+</div>
+</section>
+<section id="cuando">
+<h2>¿Cuándo debe implementarse?</h2>
+<p>
+        El momento ideal para implementar el Green Software es desde la fase inicial de cualquier proyecto tecnológico, abarcando todas las etapas del ciclo de vida del software, desde la planificación hasta el mantenimiento.<br/>
+        Integrar prácticas sostenibles desde el principio maximiza los beneficios ambientales y garantiza la eficacia de la sostenibilidad tecnológica.
+      </p>
+</section>
+<section id="donde">
+<h2>¿Dónde se aplica el Green Software?</h2>
+<p>
+        El Green Software se aplica principalmente en centros de datos, empresas tecnológicas, instituciones educativas, hogares y oficinas.<br/>
+        Su adopción es transversal y esencial en múltiples ámbitos para lograr impactos ambientales significativos.
+      </p>
+</section>
+<section id="como">
+<h2>¿Cómo gestionar adecuadamente el Green Software?</h2>
+<div class="img-text-row">
+<p>
+          La gestión efectiva del Green Software implica definir objetivos claros en políticas corporativas, aplicar metodologías ágiles con criterios sostenibles y realizar auditorías periódicas para evaluar el impacto ambiental.<br/>
+          Es fundamental la formación continua, el monitoreo constante del rendimiento ambiental y el compromiso de toda la organización. Una metodología estructurada y bien definida asegura resultados positivos y sostenibles.
+        </p>
+<img alt="Gestión sostenible" class="img-right" src="imagenes/5.jpeg"/>
+</div>
+</section>
+<section id="herramientas">
+<h2>¿Con qué herramientas se gestiona?</h2>
+<p>
+        Las herramientas principales incluyen sistemas avanzados de monitoreo energético, plataformas tecnológicas para optimizar recursos, normativas y certificaciones internacionales como ISO 14001 o Energy Star.<br/>
+        También destacan tecnologías de eficiencia energética y sistemas de gestión ambiental integrados. Disponer de herramientas adecuadas facilita el cumplimiento de objetivos sostenibles.
+      </p>
+</section>
+<section id="costos">
+<h2>¿Cuánto cuesta la implementación?</h2>
+<div class="img-text-row">
+<img alt="Costos y ahorro energético" class="img-left" src="imagenes/6.jpeg"/>
+<p>
+          Los recursos necesarios para implementar Green Software varían según el proyecto. Se requiere inversión inicial en capacitación y tecnología avanzada, pero a largo plazo se logra una reducción significativa de costos operativos gracias al menor consumo energético.<br/>
+          Aunque existen costos iniciales, el ahorro energético y la rentabilidad a largo plazo hacen que la inversión en Green Software sea económicamente beneficiosa.
+        </p>
+</div>
+</section>
+<section class="conclusion" id="conclusion">
+<span class="leaf-icon">🍃</span>
+<h2>Conclusión</h2>
+<p>
+        El Green Software representa una oportunidad única para transformar la tecnología en un aliado del planeta.<br/>
+        Adoptar prácticas sostenibles no solo reduce el impacto ambiental, sino que impulsa la innovación y la eficiencia en las organizaciones.<br/>
+<b>La colaboración y el compromiso de todos los actores son esenciales para construir un futuro digital más verde y responsable.</b>
+</p>
+</section>
+</main>
+<section id="bibliografia">
     <h2>Bibliografía</h2>
     <ul>
       <li>Green Software Foundation. (2023). <em>Principles of Sustainable Software Engineering</em>. Recuperado de <a href="https://greensoftware.foundation/" target="_blank">greensoftware.foundation</a></li>
