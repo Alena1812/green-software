@@ -11,7 +11,7 @@
       padding: 0;
       background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
       color: #2e7d32;
-      line-height: 1.7;
+      line-height: 1.8;
     }
     header {
       background: linear-gradient(rgba(46,125,50,0.85), rgba(56,142,60,0.85)), url('imagenes/1.jpeg') no-repeat center center;
@@ -19,10 +19,6 @@
       color: #fff;
       padding: 4rem 2rem 2rem 2rem;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       box-shadow: 0 2px 10px rgba(44, 62, 80, 0.1);
     }
     header h1 {
@@ -37,26 +33,22 @@
     nav {
       background: #fff;
       display: flex;
-      overflow-x: auto;
-      white-space: nowrap;
+      justify-content: center;
+      flex-wrap: wrap;
       padding: 1rem 0.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       box-shadow: 0 2px 8px rgba(46,125,50,0.05);
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-    nav::-webkit-scrollbar {
-      display: none;
     }
     nav a {
-      display: inline-block;
-      margin: 0.5rem 1rem;
+      margin: 0.5rem 1.2rem;
       color: #388e3c;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.2s;
       border-bottom: 2px solid transparent;
       padding-bottom: 2px;
-      white-space: nowrap;
     }
     nav a:hover {
       color: #1b5e20;
@@ -72,7 +64,7 @@
       border-radius: 12px;
       box-shadow: 0 2px 12px rgba(46,125,50,0.08);
       margin-bottom: 2.5rem;
-      padding: 2.5rem 2rem;
+      padding: 3rem 2.5rem;
       position: relative;
       overflow: hidden;
       animation: fadeInUp 1s;
@@ -119,8 +111,50 @@
       border-left: 6px solid #66bb6a;
       padding-left: 0.7rem;
       margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+    
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      font-size: 1.05rem;
+    }
+    
+    /* Estilo para listas */
+    .stats-list {
+      background: #f1f8e9;
+      border-left: 4px solid #66bb6a;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    
+    .stats-list li {
+      margin-bottom: 0.8rem;
+      color: #2e7d32;
+      font-weight: 500;
+    }
+    
+    /* Separadores visuales */
+    .text-highlight {
+      background: linear-gradient(120deg, #e8f5e9 0%, #c8e6c9 100%);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      border-left: 4px solid #4caf50;
+      font-weight: 500;
+      color: #1b5e20;
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-top: 2rem;
       margin-bottom: 1rem;
-      font-size: 1.6rem;
     }
     ul, ol {
       margin-left: 1.5rem;
@@ -198,35 +232,6 @@
       main { padding: 0 0.3rem; }
       section { padding: 1.2rem 0.7rem; }
     }
-    #btn-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #66bb6a;
-      color: white;
-      border: none;
-      padding: 0.6rem 1rem;
-      font-size: 1.4rem;
-      border-radius: 50%;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      cursor: pointer;
-      z-index: 999;
-      transition: background 0.3s;
-    }
-    #btn-top:hover {
-      background: #388e3c;
-    }
-    @media (min-width: 768px) {
-  nav {
-    overflow-x: visible;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
-p {
-  text-align: justify;
-}
-
   </style>
 </head>
 <body>
@@ -245,119 +250,254 @@ p {
     <a href="#herramientas">Herramientas</a>
     <a href="#costos">Costos</a>
     <a href="#conclusion">Conclusión</a>
-    <a href="#bibliografia">Bibliografía</a>
   </nav>
-<main>
-<section id="que">
-<h2>¿Qué es el Green Software?</h2>
-<div class="img-text-row">
-<img alt="Naturaleza y tecnología" class="img-left" src="imagenes/2.jpeg"/>
-<p>
-          El Green Software, también conocido como software sostenible, es una práctica tecnológica orientada a desarrollar, gestionar y utilizar software con un impacto ambiental mínimo. Promueve la eficiencia energética y la optimización de recursos informáticos, comprometiéndose con la sostenibilidad a través de un diseño eficiente de código, elección de infraestructuras ecológicas y prácticas responsables.<br/>
-          Implica reducir el consumo energético, seleccionar tecnologías sostenibles y minimizar la huella de carbono digital. En resumen, el Green Software es una estrategia vital para reducir el impacto ambiental del uso intensivo de tecnologías digitales y enfrentar los desafíos ecológicos actuales.
-        </p>
-</div>
-</section>
-<section id="por-que">
-<h2>¿Por qué es importante el Green Software?</h2>
-<p>
-        La importancia del Green Software surge del incremento exponencial del consumo energético global debido a la digitalización acelerada. La creciente demanda de servicios digitales impulsa el funcionamiento constante de centros de datos, que consumen aproximadamente el 3% de la energía mundial.<br/>
-        Implementar software sostenible es indispensable para mitigar el impacto ambiental del sector tecnológico, reducir emisiones contaminantes y fomentar un desarrollo responsable. Adoptar estrategias sostenibles es clave para gestionar el crecimiento tecnológico y garantizar la sostenibilidad ambiental.
+  <main>
+    <section id="que">
+      <h2>¿Qué es el Green Software?</h2>
+      <div class="img-text-row">
+        <img src="imagenes/2.jpeg" alt="Naturaleza y tecnología" class="img-left">
+        <div>
+          <p>
+            El Green Software es el desarrollo y la operación de software diseñado para minimizar el consumo de energía y las emisiones de carbono asociadas. Este concepto, que surge de la creciente huella ambiental de la industria tecnológica, implica una responsabilidad en cada fase: desde el diseño y la codificación hasta el despliegue y el uso de las aplicaciones.
+          </p>
+          <div class="text-highlight">
+            Va más allá de la eficiencia energética, abarcando también la optimización de los recursos de hardware y la promoción de prácticas de desarrollo sostenibles. No se trata de frenar la innovación, sino de encontrar un camino para el avance digital que sea viable a largo plazo para nuestro planeta.
+          </div>
+          <p>
+            Podemos describir el Green Software como un proceso integrador y participativo cuyo objetivo es reducir la huella de carbono de la tecnología digital. Requiere la aplicación de principios de arquitectura eficientes, la adopción de prácticas de codificación optimizadas, el uso de infraestructuras energéticamente eficientes y una sensibilización constante de los usuarios.
+          </p>
+          <p>
+            Es un delicado acto de equilibrio entre la funcionalidad del software y los límites ambientales de nuestro planeta. Por ejemplo, implica implementar algoritmos más eficientes, optimizar bases de datos, desplegar aplicaciones en centros de datos que utilizan energía renovable y diseñar interfaces de usuario que minimicen el consumo de datos.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="por-que">
+      <h2>¿Por qué es importante el Green Software?</h2>
+      <p>
+        La causa principal por la que el Green Software es crucial radica en la creciente huella de carbono de la industria tecnológica. El consumo energético de centros de datos, redes y dispositivos digitales aumenta sin cesar, contribuyendo de forma significativa a las emisiones globales de gases de efecto invernadero.
       </p>
-</section>
-<section id="para-que">
-<h2>¿Para qué implementar el Green Software?</h2>
-<div class="img-text-row">
-<p>
-          El propósito del Green Software es reducir las emisiones de carbono mediante el uso eficiente de la energía y disminuir costos operativos gestionando racionalmente los recursos tecnológicos.<br/>
-          Además, permite cumplir normativas ambientales internacionales, mejorar la reputación corporativa y fomentar la innovación tecnológica con criterios ecológicos. Implementar Green Software genera beneficios ambientales, económicos y reputacionales, siendo una herramienta estratégica en la gestión tecnológica sostenible.
-        </p>
-<img alt="Objetivo ecológico" class="img-right" src="imagenes/3.jpeg"/>
-</div>
-</section>
-<section id="quienes">
-<h2>¿Quiénes están involucrados?</h2>
-<div class="img-text-row">
-<img alt="Equipo colaborando en tecnología sostenible" class="img-left" src="imagenes/4.jpg"/>
-<p>
-          Los principales responsables del Green Software son los desarrolladores, quienes influyen en la eficiencia del código. Las empresas tecnológicas deben adoptar políticas sostenibles, mientras que los usuarios finales impulsan la demanda de soluciones ecológicas.<br/>
-          También participan gobiernos y organismos reguladores, así como organizaciones educativas y ambientales. La implementación eficaz del Green Software requiere la participación coordinada de múltiples actores, asegurando el éxito del enfoque sostenible.
-        </p>
-</div>
-</section>
-<section id="cuando">
-<h2>¿Cuándo debe implementarse?</h2>
-<p>
-        El momento ideal para implementar el Green Software es desde la fase inicial de cualquier proyecto tecnológico, abarcando todas las etapas del ciclo de vida del software, desde la planificación hasta el mantenimiento.<br/>
-        Integrar prácticas sostenibles desde el principio maximiza los beneficios ambientales y garantiza la eficacia de la sostenibilidad tecnológica.
+      <p>
+        Además, la fabricación de hardware, con sus complejas cadenas de suministro y el uso de materiales escasos, genera un impacto ambiental considerable. Estos problemas no son meras abstracciones; afectan directamente nuestro clima, la disponibilidad de recursos naturales y la gestión de residuos electrónicos a escala planetaria.
       </p>
-</section>
-<section id="donde">
-<h2>¿Dónde se aplica el Green Software?</h2>
-<p>
-        El Green Software se aplica principalmente en centros de datos, empresas tecnológicas, instituciones educativas, hogares y oficinas.<br/>
-        Su adopción es transversal y esencial en múltiples ámbitos para lograr impactos ambientales significativos.
+      <div class="text-highlight">
+        El Green Software se justifica por su enfoque integrador, racional y preventivo. No se trata de frenar el avance tecnológico, sino de impulsarlo con una inteligencia ambiental estratégica.
+      </div>
+      <p>
+        Nos permite anticipar problemas de consumo energético, reducir costos operativos a largo plazo y construir un ecosistema digital mucho más resiliente. Invertir en prácticas de desarrollo de software eficiente, en la optimización de infraestructuras y en la formación de ingenieros de software verde no solo es moralmente correcto; es económicamente rentable y estratégicamente sabio para cualquier organización en la era digital.
       </p>
-</section>
-<section id="como">
-<h2>¿Cómo gestionar adecuadamente el Green Software?</h2>
-<div class="img-text-row">
-<p>
-          La gestión efectiva del Green Software implica definir objetivos claros en políticas corporativas, aplicar metodologías ágiles con criterios sostenibles y realizar auditorías periódicas para evaluar el impacto ambiental.<br/>
-          Es fundamental la formación continua, el monitoreo constante del rendimiento ambiental y el compromiso de toda la organización. Una metodología estructurada y bien definida asegura resultados positivos y sostenibles.
-        </p>
-<img alt="Gestión sostenible" class="img-right" src="imagenes/5.jpeg"/>
-</div>
-</section>
-<section id="herramientas">
-<h2>¿Con qué herramientas se gestiona?</h2>
-<p>
-        Las herramientas principales incluyen sistemas avanzados de monitoreo energético, plataformas tecnológicas para optimizar recursos, normativas y certificaciones internacionales como ISO 14001 o Energy Star.<br/>
-        También destacan tecnologías de eficiencia energética y sistemas de gestión ambiental integrados. Disponer de herramientas adecuadas facilita el cumplimiento de objetivos sostenibles.
+    </section>
+    <section id="para-que">
+      <h2>¿Para qué implementar el Green Software?</h2>
+      <div class="img-text-row">
+        <div>
+          <p>
+            El propósito fundamental del Green Software es construir una tecnología más responsable y sostenible. Su objetivo es asegurar que el desarrollo digital no comprometa los recursos energéticos y ambientales del planeta para las generaciones futuras, logrando una reducción significativa de la huella de carbono de la industria del software.
+          </p>
+          <div class="text-highlight">
+            El motivo para impulsar el Green Software es empoderar a los desarrolladores y arquitectos de software, proporcionándoles el conocimiento y las herramientas necesarias para tomar decisiones de diseño que consideren el impacto ambiental.
+          </div>
+          <p>
+            Al hacerlo, se busca promover una cultura de desarrollo más consciente y sostenible en toda la industria.
+          </p>
+        </div>
+        <img src="imagenes/3.jpeg" alt="Objetivo ecológico" class="img-right">
+      </div>
+    </section>
+    <section id="quienes">
+      <h2>¿Quiénes están involucrados?</h2>
+      <div class="img-text-row">
+        <img src="imagenes/4.jpg" alt="Equipo colaborando en tecnología sostenible" class="img-left">
+        <div>
+          <p>
+            Las personas intervinientes en el ecosistema del Green Software son diversas y abarcan toda la cadena de valor tecnológica:
+          </p>
+          <ul>
+            <li><strong>Ingenieros de software, arquitectos y desarrolladores</strong> que diseñan y escriben el código</li>
+            <li><strong>Operadores de centros de datos y proveedores de la nube</strong> que gestionan la infraestructura</li>
+            <li><strong>Fabricantes de hardware</strong> que producen los equipos con los que el software interactúa</li>
+            <li><strong>Investigadores y académicos</strong> que desarrollan nuevas técnicas y herramientas para la optimización</li>
+            <li><strong>Organizaciones de estándares</strong> que establecen métricas y directrices</li>
+            <li><strong>Empresas de tecnología</strong> que implementan prácticas de Green Software en sus productos</li>
+          </ul>
+          
+          <div class="text-highlight">
+            Cada persona responsable dentro del ciclo de vida del software tiene un papel fundamental en la adopción del Green Software.
+          </div>
+          
+          <p>
+            Desde los líderes tecnológicos que toman decisiones estratégicas sobre la arquitectura y la implementación, hasta los desarrolladores que escriben el código día a día. Los usuarios finales también comparten esta responsabilidad al elegir servicios y dispositivos más eficientes.
+          </p>
+          <p>
+            Incluso los diseñadores de experiencia de usuario (UX) tienen la responsabilidad de crear interfaces que minimicen el consumo de recursos, impulsando un comportamiento más sostenible por parte del usuario.
+          </p>
+          <p>
+            Las personas afectadas por la falta de Green Software son, en última instancia, toda la humanidad. Esto incluye de manera prominente a las generaciones futuras, quienes heredarán un planeta con una mayor huella de carbono digital y una cantidad creciente de residuos electrónicos.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="cuando">
+      <h2>¿Cuándo debe implementarse?</h2>
+      <div class="text-highlight">
+        El momento clave en la toma de conciencia sobre el impacto ambiental del software se dio a principios de la década de 2000, cuando la expansión de internet y la proliferación de centros de datos hicieron que el consumo energético de los servidores se volviera notoriamente significativo.
+      </div>
+      <p>
+        Cada avance tecnológico masivo ha representado una ocasión importante para reflexionar sobre el impacto energético del software:
       </p>
-</section>
-<section id="costos">
-<h2>¿Cuánto cuesta la implementación?</h2>
-<div class="img-text-row">
-<img alt="Costos y ahorro energético" class="img-left" src="imagenes/6.jpeg"/>
-<p>
-          Los recursos necesarios para implementar Green Software varían según el proyecto. Se requiere inversión inicial en capacitación y tecnología avanzada, pero a largo plazo se logra una reducción significativa de costos operativos gracias al menor consumo energético.<br/>
-          Aunque existen costos iniciales, el ahorro energético y la rentabilidad a largo plazo hacen que la inversión en Green Software sea económicamente beneficiosa.
-        </p>
-</div>
-</section>
-<section class="conclusion" id="conclusion">
-<span class="leaf-icon">🍃</span>
-<h2>Conclusión</h2>
-<p>
-        El Green Software representa una oportunidad única para transformar la tecnología en un aliado del planeta.<br/>
-        Adoptar prácticas sostenibles no solo reduce el impacto ambiental, sino que impulsa la innovación y la eficiencia en las organizaciones.<br/>
-<b>La colaboración y el compromiso de todos los actores son esenciales para construir un futuro digital más verde y responsable.</b>
-</p>
-</section>
-<section id="bibliografia">
-    <h2>Bibliografía</h2>
-    <ul>
-      <li>Green Software Foundation. (2023). <em>Principles of Sustainable Software Engineering</em>. Recuperado de <a href="https://greensoftware.foundation/" target="_blank">greensoftware.foundation</a></li>
-      <li>World Economic Forum. (2022). <em>Digital Sustainability Report</em>. Recuperado de <a href="https://www.weforum.org" target="_blank">weforum.org</a></li>
-      <li>Microsoft. (2023). <em>Sustainable Software Engineering</em>. Recuperado de <a href="https://learn.microsoft.com/en-us/learn/modules/sustainable-software-engineering-overview/" target="_blank">learn.microsoft.com</a></li>
-    </ul>
-    <div style="margin-top: 2rem; text-align: center;">
-      <p style="font-size: 1.15rem; color: #2e7d32;">
-        📎 Para profundizar más sobre este tema, podés consultar el siguiente documento:<br/>
-        <a href="https://docs.google.com/document/d/1pWUjf_eo2C-xVZ63OgDSnOM0DGCUqRfojznimyT0Q9M/edit?usp=sharing" target="_blank" style="color: #1b5e20; font-weight: bold; text-decoration: underline;">
-          Green Software - Documento Ampliado
-        </a>
+      <ul>
+        <li>La expansión del <strong>cloud computing</strong></li>
+        <li>El desarrollo del <strong>Internet de las Cosas (IoT)</strong></li>
+        <li>El crecimiento exponencial de la <strong>Inteligencia Artificial (IA)</strong></li>
+      </ul>
+      <p>
+        Además, la adopción de la sostenibilidad como pilar estratégico en muchas empresas tecnológicas, junto con los objetivos de reducción de emisiones establecidos por gobiernos, son grandes ocasiones que impulsan el desarrollo y la implementación del Green Software a nivel global.
       </p>
-    </div>
-  </section>
+    </section>
+    <section id="donde">
+      <h2>¿Dónde se aplica el Green Software?</h2>
+      <p>
+        Cada sitio donde el software cobra vida (se desarrolla), se pone en funcionamiento (se despliega) o se utiliza, representa una oportunidad directa para aplicar los principios del Green Software.
+      </p>
+      <div class="text-highlight">
+        Esto abarca desde una computadora personal de un desarrollador que optimiza su código, hasta un centro de datos masivo que utiliza energía renovable, o un dispositivo móvil que ejecuta una aplicación diseñada para ser eficiente.
+      </div>
+      <p>
+        Los lugares centrales para la aplicación del Green Software son:
+      </p>
+      <ul>
+        <li><strong>Centros de datos</strong> (físicos u on-premise, y en la nube) - donde se consume la mayor parte de la energía del software</li>
+        <li><strong>Dispositivos de borde (Edge Devices)</strong> - smartphones, sensores IoT y otros dispositivos inteligentes</li>
+        <li><strong>Oficinas de desarrollo y entornos de prueba</strong> - donde se pueden optimizar procesos para que sean más verdes</li>
+      </ul>
+      <p>
+        En cada eslabón de la cadena de valor del software, cualquier sitio puede convertirse en un espacio clave para la transformación hacia una sostenibilidad digital.
+      </p>
+    </section>
+    <section id="como">
+      <h2>¿Cómo gestionar adecuadamente el Green Software?</h2>
+      <div class="img-text-row">
+        <div>
+          <p>
+            Una manera efectiva de avanzar en el Green Software es a través del diseño de arquitecturas de software eficientes que minimicen la necesidad de recursos computacionales. Esto incluye decisiones clave como:
+          </p>
+          <ul>
+            <li>Elegir los <strong>lenguajes de programación</strong> más adecuados</li>
+            <li>Diseñar <strong>algoritmos optimizados</strong></li>
+            <li>Utilizar <strong>frameworks</strong> que sean inherentemente ligeros y rápidos</li>
+          </ul>
+          
+          <div class="text-highlight">
+            El método para lograr un software más verde debe combinar la innovación tecnológica en herramientas de desarrollo con una colaboración estrecha entre los equipos de software y operaciones (DevOps).
+          </div>
+          
+          <p>
+            Ejemplos concretos de este método incluyen:
+          </p>
+          <ul>
+            <li>El uso de <strong>contenedores eficientes</strong></li>
+            <li>La <strong>optimización de bases de datos</strong></li>
+            <li>El <strong>escalado inteligente</strong> de servicios</li>
+            <li>La adopción de prácticas de <strong>Integración Continua/Despliegue Continuo (CI/CD)</strong> que automaticen las métricas de eficiencia energética</li>
+          </ul>
+          
+          <p>
+            Existen numerosas técnicas concretas que contribuyen a alcanzar el Green Software:
+          </p>
+          <ul>
+            <li>La observabilidad de energía (monitorear el consumo)</li>
+            <li>La optimización de algoritmos</li>
+            <li>El uso eficiente de cachés</li>
+            <li>La virtualización de servidores</li>
+            <li>La minimización de transferencias de datos</li>
+            <li>El diseño con arquitectura sin servidor (serverless)</li>
+            <li>El desarrollo "cloud native" con enfoque en la eficiencia</li>
+          </ul>
+        </div>
+        <img src="imagenes/5.jpeg" alt="Gestión sostenible" class="img-right">
+      </div>
+    </section>
+    <section id="herramientas">
+      <h2>¿Con qué herramientas se gestiona?</h2>
+      <div class="text-highlight">
+        Contamos con instrumentos clave para el desarrollo de Green Software que abarcan desde herramientas de análisis hasta componentes físicos y marcos de gobernanza.
+      </div>
+      
+      <h3 style="color: #2e7d32; margin-top: 2rem; margin-bottom: 1rem;">🔧 Herramientas de Desarrollo</h3>
+      <p>
+        Entre ellos destacan las <strong>herramientas de análisis de código y rendimiento</strong>, esenciales para identificar ineficiencias. Además, son cruciales los <strong>lenguajes de programación y frameworks</strong> diseñados específicamente para ser más ligeros y rápidos, contribuyendo a una menor demanda de recursos computacionales.
+      </p>
+      
+      <h3 style="color: #2e7d32; margin-top: 2rem; margin-bottom: 1rem;">💻 Componentes Físicos</h3>
+      <p>
+        Los objetos tecnológicos y físicos son componentes tangibles que facilitan la transición hacia modelos de computación sostenibles. Esto incluye:
+      </p>
+      <ul>
+        <li><strong>Servidores más eficientes</strong></li>
+        <li><strong>Chips de bajo consumo energético</strong></li>
+        <li><strong>Dispositivos con una mayor vida útil</strong></li>
+      </ul>
+      <p>
+        Todos diseñados para reducir el impacto ambiental del hardware.
+      </p>
+      
+      <h3 style="color: #2e7d32; margin-top: 2rem; margin-bottom: 1rem;">📋 Marco de Gobernanza</h3>
+      <p>
+        Las herramientas de gobernanza establecen el marco regulatorio y orientador para el Green Software:
+      </p>
+      <ul>
+        <li><strong>Estándares de la industria</strong> (como los propuestos por la Green Software Foundation)</li>
+        <li><strong>Certificaciones de eficiencia energética</strong></li>
+        <li><strong>Políticas internas de las empresas</strong> que promueven activamente el desarrollo sostenible y la responsabilidad ambiental en el software</li>
+      </ul>
+    </section>
+    <section id="costos">
+      <h2>¿Cuánto cuesta la implementación?</h2>
+      <div class="img-text-row">
+        <img src="imagenes/6.jpeg" alt="Costos y ahorro energético" class="img-left">
+        <div>
+          <p>
+            El Green Software implica un uso consciente y controlado de los recursos energéticos y computacionales. Por ejemplo, la industria tecnológica ya consume entre el <strong>3% y el 10%</strong> de la electricidad global, y esta cantidad sigue en aumento.
+          </p>
+          <div class="text-highlight">
+            Una parte significativa de esta energía se destina directamente a la ejecución de software. Un software ineficiente no solo es insostenible energéticamente, sino que también genera una mayor necesidad de hardware y, por ende, más residuos electrónicos.
+          </div>
+          
+          <h3 style="color: #2e7d32; margin-top: 2rem; margin-bottom: 1rem;">📊 Cifras que demuestran la urgencia de actuar:</h3>
+          <div class="stats-list">
+            <ul style="margin: 0; padding-left: 1.5rem;">
+              <li><strong>89 millones de toneladas</strong> de residuos electrónicos se generarán anualmente para 2030 (según el Global E-waste Monitor)</li>
+              <li>Entre el <strong>10% y el 20%</strong> de las emisiones globales podrían provenir de la industria tecnológica para 2030 si no se toman medidas adecuadas</li>
+              <li>El entrenamiento de algunos modelos de IA avanzados puede consumir la misma energía que <strong>5 coches en toda su vida útil</strong> (según el MIT Technology Review)</li>
+              <li>Se estima que el sector de las TIC generará alrededor del <strong>5% de las emisiones globales</strong> para 2030</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="conclusion" class="conclusion">
+      <span class="leaf-icon">🍃</span>
+      <h2>Conclusión</h2>
+      <p>
+        El Green Software no es una meta lejana ni una utopía inalcanzable. Es un llamado a la acción, una invitación a
+        repensar nuestra relación con la tecnología y con el planeta. Es un desafío complejo, sí, pero también una oportunidad
+        enorme para crear un mundo digital más justo, equitativo y próspero para todos.
+        Hemos visto que el Green Software no se trata solo de apagar los dispositivos, aunque esa acción es importante. Se
+        trata de transformar nuestra forma de diseñar, desarrollar, desplegar y operar el software.
+        La buena noticia es que tenemos las herramientas, el conocimiento y el poder para lograrlo. Contamos con la innovación
+        tecnológica, el impulso de la comunidad de desarrolladores, el compromiso de muchas empresas líderes y, sobre todo,
+        con la creciente conciencia de que la tecnología también debe ser parte de la solución ambiental.
+        El camino hacia el Green Software no será fácil, y habrá obstáculos y retrocesos. Pero si trabajamos juntos, con
+        determinación y esperanza, podemos construir un futuro donde el avance digital vaya de la mano con la protección del
+        planeta y el bienestar social. Un futuro donde la tecnología sea una fuerza para la sostenibilidad, hoy y siempre.
+      </p>
+    </section>
+  </main>
   <footer>
     © 2025 - Un Enfoque Integral hacia el Software Ambientalmente Sostenible
     <div class="footer-group">
       Grupo 27 - Alena Ariza, Tiziana Carrizo, Jose Ignacio Maspero, Tomas Olmos
     </div>
   </footer>
-  <button id="btn-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
 </body>
 </html>
-
